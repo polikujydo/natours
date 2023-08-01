@@ -1,0 +1,63 @@
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 17.4px;
+        font-weight: 300;
+    
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+.btn{
+    &:link, &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        transition: all .1s;
+    }
+    
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1rem rgba($color-black, .2);
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+    }
+    
+    &--white{
+        background-color: $color-white;
+        color: $color-grey;
+        position: absolute;
+        right: 34%;
+    }
+    
+    &--animated{
+        animation-duration: 2s;
+        animation-name: moveInTop;
+        animation-timing-function: linear;
+    }
+}
+
