@@ -1,0 +1,16 @@
+@import "base/functions";
+@import "base/mixins";
+@import "base/variables";
+
+@import "additional/animation";
+@import "additional/utilities";
+
+
+@import "components/abstract";
+@import "components/header";
+@import "components/major-descr";
+@import "components/composition";
+
+@import "layouts/header";
+@import "layouts/major"
+
