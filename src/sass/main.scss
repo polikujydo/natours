@@ -3,16 +3,28 @@
 @import "base/variables";
 
 @import "additional/animation";
+@import "additional/grid";
 @import "additional/utilities";
 
 
 @import "components/abstract";
+@import "components/buttons";
 @import "components/header";
-@import "components/major-descr";
+@import "components/description";
 @import "components/composition";
 @import "components/feature-box";
+@import "components/cards";
+@import "components/reviews";
+@import "components/bg-video";
+@import "components/book-form";
 
 @import "layouts/header";
-@import "layouts/major";
+@import "layouts/description";
 @import "layouts/features";
+@import "layouts/tours";
+@import "layouts/section-reviews";
+@import "layouts/section-book";
+
+
+
 
