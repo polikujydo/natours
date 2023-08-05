@@ -1,11 +1,14 @@
 .btn{
     &:link, &:visited, & {
+        display: inline-block;
+
+        position: relative;
+
+        padding: 1.5rem 4rem;
+
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
         transition: all .1s;;
-        position: relative;
 
         // Button tag
         border: none;
@@ -13,27 +16,29 @@
     }
     
     &:hover{
-        transform: translateY(-3px);
         box-shadow: 0 1rem 1rem rgba($color-black, .2);
+        transform: translateY(-3px);
     }
     
     &:active{
-        transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+        transform: translateY(-1px);
     }
     
     &--white{
-        background-color: $color-white;
-        color: $color-grey;
         position: absolute;
         left: 25%;
         top: 0;
+
+        background-color: $color-white;
+        color: $color-grey;
     }
 
     &--green{
+        position: absolute;
+
         background-color: $main-color;
         color: $color-light-grey-1;
-        position: absolute;
     }
     
     &--animated{
@@ -46,19 +51,23 @@
 .btn-text{
 
     &:link, &:visited{
+        display: inline-block;
+
+        padding: 3px;
+
+        border-bottom: 1px solid $main-color;
+
         font-size: $default-font-size;
         color: $main-color;
-        display: inline-block;
         text-decoration: none;
-        border-bottom: 1px solid $main-color;
-        padding: 3px;
         transition: all .2s;
     }
 
     &:hover{
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+
         background-color: $main-color;
         color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(-2px);
     }
 

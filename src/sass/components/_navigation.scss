@@ -1,0 +1,144 @@
+.navigation{
+    &__checkbox{
+        display: none;
+    }
+
+    &__button{
+        position: fixed;
+
+        height: 6rem;
+        width: 6rem;
+
+        top: 6.5rem;
+        right: 4rem;
+
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black, $alpha: .1);
+
+        background-color: $color-white;
+        z-index: 200;
+        cursor: pointer;
+    }
+
+    &__background{
+        position: fixed;
+
+        height: 6rem;
+        width: 6rem;
+
+        top: 6.5rem;
+        right: 4rem;
+
+        border-radius: 50%;
+        
+        background-image: radial-gradient($main-color-light, $main-color-dark);
+        z-index: 100;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1 );
+    }
+
+    &__nav{
+        position: fixed;
+
+        height: 100vh;
+        width: 0%;
+
+        top: 0;
+        left: 0;
+
+        z-index: 150;
+
+        opacity: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+    }
+
+    &__list{
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        width: 100%;
+
+        transform: translate(-50%, -50%);
+        list-style: none;
+    }
+
+    &__item{
+        margin: 1rem;
+    }
+
+    &__link{
+        &:link, &:visited{
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 220%;
+            transition: all .4s;
+
+            span{
+                display: inline-block;
+                margin-right: 1.5rem;
+            }
+        }
+       &:active, &:hover{
+        background-position: 100%;
+        color: $main-color;
+        transform: translateX(1rem);
+       }
+    }
+
+    &__checkbox:checked ~ &__background{ //after checking checkbox(label), scaling background on full blast
+        transform: scale(50);
+    }
+
+    &__checkbox:checked ~ &__nav{
+        width: 100%;
+        opacity: 1;
+    }
+
+    &__icon{
+        position: relative;
+        margin-top: 3rem;
+
+        &, &::before, &::after{
+            display: inline-block;
+            width: 3rem;
+            height: 2px;
+
+            background-color: #333;
+        }
+
+        &:after, &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+
+            transition: all .2s;
+        }
+
+        &::before{top: -.8rem;}
+        &::after{top: .8rem;}
+
+    }
+
+    &__button:hover &__icon:before{top: -1rem;}
+
+    &__button:hover &__icon:after{top: 1rem;}
+
+    &__checkbox:checked + &__button &__icon{background-color: transparent}    
+
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }  
+    
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }    
+}

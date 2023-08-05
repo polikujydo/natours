@@ -5,22 +5,27 @@
     }
 
     &__input{
+        display: block;
+
+        padding: 1.5rem 2rem;
+
+        width: 90%;
+
+        border: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 2px;
+
         font-size: 1.5rem;
         font-family: inherit;
         color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: 2px;
         background-color: rgba($color-white, .5);
-        border: none;
-        border-bottom: 3px solid transparent;
-        width: 90%;
-        display: block;
         transition: all .3s;
 
         &:focus{
+            border-bottom: 3px solid $main-color;
+
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 3px solid $main-color
         }
 
         &:focus:invalid{
@@ -34,10 +39,12 @@
 
     &__label{
         display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
+
         margin-left: 2rem;
         margin-top: .7rem;
+
+        font-size: 1.2rem;
+        font-weight: 700;
         transition: all .3s;
     }
 
@@ -52,8 +59,8 @@
     }
 
     &__radio-group{
-        width: 49%;
         display: inline-block;
+        width: 49%;
 
         &:last-child{
             margin-bottom: 2.5rem;
@@ -61,32 +68,39 @@
     }
 
     &__radio-label{
+        position: relative;
+
+        padding-left: 4.5rem;
+
         font-size: $default-font-size;
         cursor: pointer;
-        position: relative;
-        padding-left: 4.5rem;
     }
 
     &__radio-button{
+        display: inline-block;
         height: 3rem;
         width: 3rem;
-        border: 5px solid $main-color;
-        border-radius: 50%;
-        display: inline-block;
+
         position: absolute;
         left: 0;
         top: -.4rem;
 
+        border: 5px solid $main-color;
+        border-radius: 50%;
+
         &::after{
             content: '';
-            height: 1.3rem;
-            width: 1.3rem;
-            display: block;
-            border-radius: 50%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+
+            border-radius: 50%;
+            
             background-color: $main-color;
             opacity: 0;
             transition: opacity .2s;

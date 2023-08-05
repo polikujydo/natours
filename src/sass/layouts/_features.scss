@@ -1,10 +1,11 @@
 .features{
     margin-top: -10rem;
     padding: 20rem 0;
+    
     background:linear-gradient(
         to right bottom,
-        rgba($main-color-light, 0.8),
-        rgba($main-color-dark, 0.8)
+        rgba($main-color-light, $default-opacity-value),
+        rgba($main-color-dark, $default-opacity-value)
         ),
         url(../img/nat-4.jpg) center center/cover no-repeat;
     background-size: cover;

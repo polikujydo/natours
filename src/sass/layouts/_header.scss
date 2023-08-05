@@ -1,9 +1,10 @@
 .header{
     height: 95vh;
+
     background:linear-gradient(
         to right bottom,
-        rgba($main-color-light, 0.8),
-        rgba($main-color-dark, 0.8)
+        rgba($main-color-light, $default-opacity-value),
+        rgba($main-color-dark, $default-opacity-value)
         ),
         url(../img/hero.jpg) center center/cover no-repeat;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -23,6 +24,7 @@
         position: absolute;
         top: 35%;
         left: 53%;
+        
         transform: translate(-50%, -50%);
     }
 }

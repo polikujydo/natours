@@ -1,27 +1,33 @@
 .reviews{
-    width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .55);
-    border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
+
+    width: 75%;
+
+    border-radius: $default-border-radius;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+
+    background-color: rgba($color-white, .55);
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
     &__picture{
+        position: relative;
+
         width: 15rem;
         height: 15rem;
+
         background-color: orangered;
         float: left;
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
-        position: relative;
     }
 
     &__img{
         height: 100%;
+
         transform: translateX(-4rem) scale(1.4);
         transition: all .5s;
     }
@@ -34,6 +40,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+
         transform: translate(-50%, 20%);
         font-size: 1.7rem;
         color: $color-white;

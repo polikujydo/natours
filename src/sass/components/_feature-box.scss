@@ -1,18 +1,21 @@
 .feature-box{
-    background-color: rgba($color-white, .8);
-    font-size: 1.5rem;
     padding: 2.5rem;
-    border-radius: 3px;
-    text-align: center;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
     max-width: 22rem;
     min-height: 20rem;
+
+    background-color: rgba($color-white, $default-opacity-value);
+    font-size: 1.5rem;
+    border-radius: $default-border-radius;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: all .3s;
 
 
     &__icon{
-        font-size: 6rem;
         margin-bottom: 3rem;
+
+        font-size: 6rem;
         background-image: linear-gradient(to right, $main-color-light, $main-color-dark);
         background-clip: text;
         color: transparent;

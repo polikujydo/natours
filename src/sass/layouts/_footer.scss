@@ -1,6 +1,7 @@
 .footer{
-    background-color: #333;
     padding: 10rem 0;
+
+    background-color: #333;
     font-size: 1.4rem;
 
     &__logo-box{
@@ -13,9 +14,10 @@
     }
 
     &__nav{
+        display: inline-block;
+
         border-top: 1px solid #777;
         padding-top: 2rem;
-        display: inline-block;
     }
 
     &__list{
@@ -34,24 +36,29 @@
         transition: all .2s;
 
         &:link, &:visited{
+            display: inline-block;
+
             color: $color-light-grey-1;
             text-decoration: none;
             text-transform: uppercase;
-            display: inline-block;
         }
 
         &:hover, &:active{
-            color: $main-color;
             box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+            color: $main-color;
             transform: rotate(5deg) scale(1.3);
         }
     }
 
     &_copyright{
         padding-top: 2rem;
-        border-top: 1px solid #777;
-        color: $color-white;
+
         width: 85%;
+
+        border-top: 1px solid #777;
+
+        color: $color-white;
         float: right;
     }
 }
