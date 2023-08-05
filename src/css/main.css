@@ -162,12 +162,12 @@
 }
 
 body {
+  padding: 30px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
 }
 
 html {
@@ -758,9 +758,9 @@ html {
 }
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
+  padding: 1rem 2rem;
   font-size: 3rem;
   font-weight: 300;
-  padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -828,6 +828,92 @@ html {
   top: 0;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 250;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.popup__content {
+  display: table;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.25);
+          transform: translate(-50%, -50%) scale(0.25);
+  -webkit-transition: all 0.5s 0.2s;
+  transition: all 0.5s 0.2s;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__left {
+  display: table-cell;
+  width: 33.3333%;
+}
+.popup__right {
+  display: table-cell;
+  padding: 0 5rem;
+  width: 66.6667%;
+  vertical-align: middle;
+}
+.popup__text {
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  -webkit-column-rule: 1px solid #eee;
+     -moz-column-rule: 1px solid #eee;
+          column-rule: 1px solid #eee;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+.popup__close:link, .popup__close:visited {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  color: #777;
+  font-size: 3rem;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.popup__close:hover {
+  color: #55c57a;
 }
 
 .header {
